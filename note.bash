@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright 2018 Thomas de Zeeuw
+# Copyright 2018-2020 Thomas de Zeeuw
 #
 # Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
 # http://www.apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT
@@ -15,15 +15,15 @@ EDTIOR=${EDITOR:-vim}
 
 # Create the git repo, if needed.
 setup() {
-	mkdir -p "$NOTES_ROOT"
 	if [[ ! -f "$NOTES_ROOT/.git/HEAD" ]]; then
+		mkdir -p "$NOTES_ROOT"
 		git init --quiet "$NOTES_ROOT"
 	fi
 }
 
 help() {
 	echo "Usage:
-notes [options]
+note [options]
 
 	--help            Show this help message.
 
@@ -70,4 +70,4 @@ open() {
 
 setup
 
-open
+#open

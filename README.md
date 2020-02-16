@@ -1,6 +1,6 @@
 # Notes
 
-A simple notes keeper, with the help of git.
+A simple note keeper, with the help of git.
 
 Inspired by "did.txt file" by Patrick Tran, see
 https://theptrk.com/2018/07/11/did-txt-file.
@@ -8,10 +8,10 @@ https://theptrk.com/2018/07/11/did-txt-file.
 
 ## Usage
 
-`notes` can be used in the following way.
+`note` can be used in the following way.
 
 ```
-$ notes
+$ note
 ```
 
 Opens the notes file for the current week.
@@ -19,7 +19,7 @@ Opens the notes file for the current week.
 
 ## Environment variables
 
-The following environment variables changes the behaviour of `notes`.
+The following environment variables changes the behaviour of `note`.
 
 ```
 $EDITOR
@@ -37,7 +37,7 @@ The root directory which contains all notes, defaults to "~/.notes".
 $NOTES_AUTO_SYNC
 ```
 
-If this is set to `true`, or `1`, notes will call `get sync` after each call,
+If this is set to `true`, or `1`, notes will call `git sync` after each call,
 defaults to false.
 
 
