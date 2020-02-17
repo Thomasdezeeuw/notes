@@ -75,7 +75,7 @@ open_daily() {
 open_subject() {
 	local subject="$1"
 	local file=$(echo "$subject" | tr '[:upper:]' '[:lower:]')
-	file="$NOTES_DIR/subject/${subject// /_}.md"
+	file="$NOTES_DIR/subject/${file// /_}.md"
 	open_file "$file" "# $subject\n\n\n"
 }
 
