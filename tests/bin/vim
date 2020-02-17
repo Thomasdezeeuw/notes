@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Fake Vim to test arguments passed to Vim.
+
+echo "$@"
