@@ -122,8 +122,9 @@ search() {
 	local key_word="$1"
 
 	if [[ "$EDITOR" == "vim" ]]; then
-		# Open all files at once using tabs.
-		vim -p `search_files "$key_word"`
+		# Open all files at once using tabs and highlight the keyword (case
+		# in-sensitive).
+		vim +/"$key_word\c" -p `search_files "$key_word"`
 	else
 		# Open all files one after another.
 		for file in `search_files "$key_word"`; do
